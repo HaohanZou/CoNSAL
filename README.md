@@ -22,18 +22,18 @@ Visualization of Lie Derivative of the Neural Lyapunov Function under linear pat
 algorithm. Showing the result of the first two epochs:
 
 <div style="text-align: center;">
-<img src="assets/learner.png" alt="Plot" width="740" height="226">
+<img src="assets/learner.png" alt="Plot" width="814" height="249">
 </div> <br>
 
 **Symbolic Regression Stage:** The symbolic regression model from `PySR` approximates the neural network as analytical formulas.
 
-**Verification Stage:** The falsifier checks the Lyapunov conditions on the analytical formula in specified state space of the dynamics. 
+**Verification Stage:** The proposed falsifier, root finding, checks the Lyapunov conditions on the analytical formula in specified state space of the dynamics. 
 
 SMT Counter Examples, Roots, and Root finding Counter Examples Visualization using the same checkpoint at
 epoch 1 for Lie derivative of the neural Lyapunov functions under linear path-following dynamics:
 
 <div style="text-align: center;">
-<img src="assets/verifier.png" alt="Plot" width="744" height="208">
+<img src="assets/verifier.png" alt="Plot" width="818" height="229">
 </div>
 
 The same number of counterexamples are generated. The zoomed-in region shows the counterexamples from SMT solvers.
@@ -65,7 +65,19 @@ The training process iteratively updates the parameters by minimizing the Lyapun
 
 * [Linear Path Following](https://github.com/HaohanZou/CoNSAL/tree/main/Van_Der_Pol_Oscillator)
 
+## How to train
 
+```
+# Train on Van Der Pol Oscillator
+
+cd Van_Der_Pol_Oscillator
+python Van_Der_Pol_Oscillator_training.py
+
+# Train on Linear Path Following
+
+cd Linear_Path_Following
+python Linear_Path_Following_training.py
+```
 
 ## Citation
 ```
